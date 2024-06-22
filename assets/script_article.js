@@ -49,7 +49,7 @@ function applyIdToDivsOfSectsOf(parentSection){
         const isHeadingValid = headingTiers.includes(headingTag);
         isHeadingValid ? headingCounts[headingTag]++ : console.log("first element of a div is not a heading");
         
-        id += headingTag + "-" + headingCounts[headingTag];
+        id += headingTiers.indexOf(headingTag) + "-" + headingCounts[headingTag] + "-" + heading.innerHTML.replace(/ /g,"_");
         childDiv.setAttribute("id", id);  
 
 
