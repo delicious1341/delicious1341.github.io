@@ -38,7 +38,7 @@ function applyIdToDivsOfSectsOf(parentSection){
     
         // prefix id of parent, unless parent is main
         if (parentSection.tagName == "SECTION") {
-            id += parentSection.firstElementChild.id + "-";
+            id += parentSection.firstElementChild.id.replace(/\.[^.]+$/, '') + ".";
         }
 
         // get the heading of the child section and the heading type
@@ -49,7 +49,12 @@ function applyIdToDivsOfSectsOf(parentSection){
         const isHeadingValid = headingTiers.includes(headingTag);
         isHeadingValid ? headingCounts[headingTag]++ : console.log("first element of a div is not a heading");
         
-        id += headingTiers.indexOf(headingTag) + "-" + headingCounts[headingTag] + "-" + heading.innerHTML.replace(/ /g,"_");
+        if (headingTag == "h1") {
+            id += "Introduction"
+        } else {
+            id += headingCounts[headingTag] + "." + heading.innerHTML.replace(/ /g,"_");
+        }
+
         childDiv.setAttribute("id", id);  
 
 
