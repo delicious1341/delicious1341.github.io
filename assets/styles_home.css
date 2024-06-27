@@ -12,13 +12,13 @@ body {
 }
 
 body > div {
-    width: var(--side-width);
+    width: min(100%, var(--side-width));
     height: min-content;
     margin: 0 auto;
 }
 
 main {
-    width: var(--main-width);
+    width: min(100%, var(--main-width));
     margin: 0 auto;
 }
 
@@ -97,6 +97,11 @@ header h1 {
 
 header ul {
     margin-left: 1.6rem !important;
+    margin-top: 0.5rem;
+}
+
+header figure {
+    margin-bottom: 0.5rem;
 }
 
 a {

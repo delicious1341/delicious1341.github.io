@@ -112,7 +112,8 @@ function createObserver(rootMargin) {
     return new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             const contentLink = document.querySelector("nav a[href='#" + entry.target.id +"']");
-            contentLink.style.fontWeight = (entry.isIntersecting) ? "bold" : "normal";
+            contentLink.style.fontWeight = (entry.isIntersecting) ? "900" : "normal";
+            setHeights();
         });
       }, {
         rootMargin: rootMargin
