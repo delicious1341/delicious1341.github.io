@@ -107,6 +107,10 @@
     content: "\f0cb";
 }
 
+.fa-bars::before {
+    content: "\f0c9";
+}
+
 /* Inter font local file */
 
 @font-face {
