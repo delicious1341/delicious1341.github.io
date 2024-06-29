@@ -141,7 +141,7 @@ nav {
     background-color: var(--background-color);
 }
 nav ul, nav ol {
-    padding-left: 2.5em;
+    padding-left: 0;
     list-style: none;
 }
 nav > ul {
@@ -149,8 +149,27 @@ nav > ul {
     padding: 1em 0;
 }
 nav li {
-    padding-right: 1em;
+    border-left: var(--background-color) 2px solid;
 }
+nav ul > li {
+    padding-left: calc(0.5em);
+}
+nav ol > li {
+    padding-left: calc(2.5em * 1);
+}
+nav ol > ol > li {
+    padding-left: calc(2.5em * 2);
+}
+nav ol > ol > ol > li {
+    padding-left: calc(2.5em * 3);
+}
+nav ol > ol > ol > ol > li {
+    padding-left: calc(2.5em * 4);
+}
+nav ol > ol > ol > ol > ol > li {
+    padding-left: calc(2.5em * 5);
+}
+
 
 /* dark mode toggle */
 :root:has(#dark-mode-switch:checked) {
