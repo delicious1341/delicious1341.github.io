@@ -256,11 +256,12 @@ footer{
     font-size: min(5vw, 1rem);    
     border-top: 2px solid currentColor;
     display: grid;
-    grid-template-columns: min-content auto;
+    grid-template-columns: max-content auto;
     grid-template-rows: min-content min-content;
     column-gap: 1em;
     row-gap: 0.5em;
     padding-top: 1rem;
+    color: red
 }
 footer figure {
     grid-column: 1 / 3;
