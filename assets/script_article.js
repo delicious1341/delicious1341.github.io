@@ -31,13 +31,13 @@ function applyIdToDivsOfSectsOf(parentSection){
     const headingCounts = {h1:0, h2:0, h3:0, h4:0, h5:0, h6:0};
     
     
-    const childDivs = parentSection.querySelectorAll(":scope > section > div");
+    const childDivs = parentSection.querySelectorAll(":scope > .indirect > .direct");
     childDivs.forEach(childDiv => {
         
         let id = "";
     
         // prefix id of parent, unless parent is main
-        if (parentSection.tagName == "SECTION") {
+        if (parentSection.tagName == "DIV") {
             id += parentSection.firstElementChild.id.replace(/\.[^.]+$/, '') + ".";
         }
 
@@ -137,7 +137,7 @@ function updateObserver() {
     
 let observer;
 let currentRootMargin = "-" + (asideHeight + navHeight) + "px 0px 0px 0px";  // Default rootMargin
-const targetElements = document.querySelectorAll("div");  // Your target element
+const targetElements = document.querySelectorAll(".direct");  // Your target element
 
 // Create initial observer
 observer = createObserver(currentRootMargin);

@@ -183,10 +183,10 @@ main {
 h1 {
     font-size: 2rem;
 }
-div {
+.direct {
     scroll-margin-top: 1rem;
 }
-main section {
+main .indirect {
     margin: 4rem 0;
 }
 main figure {
