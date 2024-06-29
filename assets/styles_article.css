@@ -301,10 +301,10 @@ footer ul {
     height: min-content;
 }
 
-footer ul * {
+footer ul *, figcaption * {
     width: max-content;
     height: min-content;
-    color: red;
+    color: green;
 }
 
 
