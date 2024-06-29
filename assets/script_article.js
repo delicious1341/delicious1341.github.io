@@ -107,13 +107,29 @@ setHeights();
 window.addEventListener("resize", setHeights);
 
 
-// Create a function to initialize the Intersection Observer
-function createObserver(rootMargin) {
+
+// Create a function to initialize the first Intersection Observer
+function createObserver1() {
     return new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            const contentLink = document.querySelector("nav a[href='#" + entry.target.id +"']");
+            const contentLink = document.querySelector("nav a[href='#Introduction']");
             contentLink.style.fontWeight = (entry.isIntersecting) ? "bold" : "normal";
             contentLink.parentElement.style.borderLeftColor = (entry.isIntersecting) ? "white" : "var(--background-color)";
+        });
+    });
+}
+const observer1 = createObserver1();
+observer1.observe(document.querySelector("#Introduction"));
+
+
+
+// Create a function to initialize the Intersection Observer
+function createObserver(rootMargin) {
+        return new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+                const contentLink = document.querySelector("nav a[href='#" + entry.target.id +"']");
+                contentLink.style.fontWeight = (entry.isIntersecting) ? "bold" : "normal";
+                contentLink.parentElement.style.borderLeftColor = (entry.isIntersecting) ? "white" : "var(--background-color)";
         });
         setHeights();
     }, {
@@ -137,7 +153,7 @@ function updateObserver() {
     
 let observer;
 let currentRootMargin = "-" + (asideHeight + navHeight) + "px 0px 0px 0px";  // Default rootMargin
-const targetElements = document.querySelectorAll(".direct");  // Your target element
+const targetElements = document.querySelectorAll(".direct:not(#Introduction)");  // Your target element
 
 // Create initial observer
 observer = createObserver(currentRootMargin);
@@ -167,3 +183,17 @@ if (mediaQuery.matches) {
     currentRootMargin = "-" + (asideHeight + navHeight) + "px 0px 0px 0px";
     updateObserver();
 }
+
+
+// while (one of)
+    // detected scroll postion before nav
+    // or
+    // detected media query ultra wide
+
+    // hide contents button and default it unchecked
+    // contents observer rootmargin 0
+
+// then show contents button and if checked
+    // contents observer rootmargin aside+nav
+
+
