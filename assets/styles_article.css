@@ -295,6 +295,10 @@ footer ul {
     margin: 0 !important;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+
+    /* try for safari */
+    width: max-content;
+    height: min-content;
 }
 
 
