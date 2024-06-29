@@ -146,8 +146,10 @@ nav ul, nav ol {
 }
 nav > ul {
     margin: 0 auto;
-    padding: 1em;
-    width: fit-content;
+    padding: 1em 0;
+}
+nav li {
+    padding-right: 1em;
 }
 
 /* dark mode toggle */
@@ -220,6 +222,9 @@ a {
         aside, nav {
             width: var(--wide-width);
             margin-left: var(--main-wide-gap);
+        }
+        nav ul {
+            width: var(--main-width);
         }
     }
     
