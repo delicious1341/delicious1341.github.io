@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Homepage - Abhay Sagar</title>
+	<link rel="icon" type="image/x-icon" href="assets/circle.png">
+
+	<link rel="stylesheet" href="assets/styles_fonts.css">
+	<link rel="stylesheet" href="assets/styles_home.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta charset="UTF-8" />
+	
+	<meta name="darkreader-lock">
+</head>
+
+<body>
+	<div>
+		<a href="#main" class="skip-to-content">Skip to Content</a>
+		<header>
+			<figure>
+				<img src="assets/square.jpg" alt="Photo of Abhay's face" width="275">
+				<figcaption>
+					<h1>Abhay Sagar</h1>
+					University of Cambridge<br>Natural Sciences Graduate
+				</figcaption>
+			</figure>
+			
+			<ul class="fa-ul" aria-label="Relevant External Links">					
+				<li>
+					<a href="https://www.youtube.com/veritasium">
+					<span class="fa-li" aria-hidden="true"><i class="fa-brands fa-youtube"></i></span>
+					YouTube Channel</a>
+				</li>
+
+				<li>
+					<a href="https://www.github.com/delicious1341">
+					<span class="fa-li" aria-hidden="true"><i class="fa-solid fa-folder-open"></i></span>
+					Git Repository</a>
+				</li>
+
+				<li>
+					<a href="mailto:abhaysagar.cv@gmail.com">
+					<span class="fa-li" aria-hidden="true"><i class="fa-solid fa-at"></i></span>
+					Email</a>
+				</li>
+
+				<li>
+					<a href="./resume">
+					<span class="fa-li" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></span>
+					Resume</a>
+				</li>
+			</ul>
+		</header>
+		
+		<aside>
+			<input type="checkbox" id="dark-mode-switch" onclick="return saveDarkModePref();" tabindex="0">
+			<label for="dark-mode-switch">
+				<span class="checkbox-toggle">
+					<i class="fa-solid fa-moon" aria-hidden="true"></i>
+					<i class="fa-solid fa-sun" aria-hidden="true"></i>
+					<span class="ball" aria-hidden="true"></span>
+				</span>
+				<span class="checkbox-label-words">Dark Mode</span>
+			</label>
+		</aside>
+							
+	</div>
+		
+	<main id="main">
+		<ul aria-label="Upcoming Articles">
+			<li>
+				<blockquote>
+					<h2>Error 404: Page Not Found</h2>
+					<footer>
+						<a href="./" class="back-to-homepage">
+							<i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+							Homepage</a>
+					</footer>
+					The URL/address requested doesn't exist, it may be a mistyped link or a link that was removed.
+					<br>Head to the homepage to find all the articles on my website.
+				</blockquote>
+			</li>
+		</ul>
+	</main>
+	<script src="assets/script_home.js"></script>
+</body>
+	
+</html>
