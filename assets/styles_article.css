@@ -301,6 +301,12 @@ footer ul {
     height: min-content;
 }
 
+footer ul * {
+    width: max-content;
+    height: min-content;
+    color: red;
+}
+
 
 /* testing making toc scrollable if too short to contain content */
 /* nav {
