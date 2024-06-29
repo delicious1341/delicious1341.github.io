@@ -14,7 +14,7 @@ darkModeSwitch.checked = (isPriorDarkMode == null) ? isBrowserDarkMode : (isPrio
 function saveDarkModePref()
 {
     localStorage.setItem(darkModeSwitch.id, darkModeSwitch.checked);
-    console.log(darkModeSwitch.id, darkModeSwitch.checked);
+    // console.log(darkModeSwitch.id, darkModeSwitch.checked);
 }
 
 
@@ -81,7 +81,7 @@ function applyIdToDivsOfSectsOf(parentSection){
             document.querySelector("nav" + contentsListTarget).appendChild(contentsListItem).appendChild(contentsAnchor);
         }
 
-        console.log(childDiv.parentElement);
+        // console.log(childDiv.parentElement);
 
         // recursive
         applyIdToDivsOfSectsOf(childDiv.parentElement);
