@@ -155,19 +155,19 @@ nav ul > li {
     padding-left: calc(0.5em);
 }
 nav ol > li {
-    padding-left: calc(2.5em * 1);
+    padding-left: calc(0.5em + 2em * 1);
 }
 nav ol > ol > li {
-    padding-left: calc(2.5em * 2);
+    padding-left: calc(0.5em + 2em * 2);
 }
 nav ol > ol > ol > li {
-    padding-left: calc(2.5em * 3);
+    padding-left: calc(0.5em + 2em * 3);
 }
 nav ol > ol > ol > ol > li {
-    padding-left: calc(2.5em * 4);
+    padding-left: calc(0.5em + 2em * 4);
 }
 nav ol > ol > ol > ol > ol > li {
-    padding-left: calc(2.5em * 5);
+    padding-left: calc(0.5em + 2em * 5);
 }
 
 
