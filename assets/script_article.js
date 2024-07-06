@@ -121,7 +121,20 @@ function createObserver1() {
 const observer1 = createObserver1();
 observer1.observe(document.querySelector("#Introduction"));
 
-
+// Observe the navigation. If in view while not sticky, don't show toggle
+function createObserverContents() {
+    return new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            contentsSwitch = document.querySelector("aside label[for='table-of-contents-switch']");
+            contentsSwitch.style.display = (entry.isIntersecting) ? "none" : "flex";
+            if (document.querySelector("#table-of-contents-switch").checked) {
+                contentsSwitch.style.display = "flex";
+            }
+        });
+    });
+}
+const observerContents = createObserverContents();
+observerContents.observe(document.querySelector("nav"));
 
 // Create a function to initialize the Intersection Observer
 function createObserver(rootMargin) {
